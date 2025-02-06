@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Website</title>
     
-    <script defer src="https://g.3gl.net/jp/906/v4.0.6/InitialLoadScript.js"></script>
+    <script>
+    const urls = [
+        "https://your-github-page.github.io/page1",
+        "https://your-github-page.github.io/page2",
+        "https://your-github-page.github.io/page3"
+    ];
+
+    let index = 0;
+
+    function redirect() {
+        if (index < urls.length) {
+            window.location.href = urls[index];
+            index++;
+            setTimeout(redirect, 3000); // Redirect every 3 seconds
+        }
+    }
+
+    setTimeout(redirect, 3000); // Start redirection after 3 seconds
+</script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
